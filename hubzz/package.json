@@ -1,0 +1,32 @@
+{
+  "name": "hubzz-makes",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Monorepo for Figma Make applications using Next.js, pnpm, and Turborepo.",
+  "packageManager": "pnpm@8.15.4",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "format": "turbo run format",
+    "typecheck": "turbo run typecheck",
+    "clean": "turbo run clean",
+    "ci": "turbo run build && turbo run lint && turbo run typecheck"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.0.0",
+    "prettier": "^3.2.5",
+    "turbo": "^1.13.0",
+    "typescript": "^5.3.3"
+  }
+}

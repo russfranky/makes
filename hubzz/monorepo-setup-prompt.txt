@@ -1,0 +1,186 @@
+You are an expert in monorepo architecture and tooling. I need you to generate complete, production-ready configuration files and setup instructions for a pnpm workspace monorepo with Turborepo, designed to manage multiple Make applications (originally from Figma).
+
+Requirements
+Project Structure:
+
+Project name: hubzz-makes
+
+Framework: Next.js 14+ with TypeScript
+
+Package manager: pnpm (strict version management)
+
+Build orchestration: Turborepo
+
+Target: 3-30+ Make applications sharing common utilities
+
+Workspace Layout:
+
+apps/ - Individual Make applications
+
+packages/ - Shared utilities, UI components, configurations
+
+Root - Monorepo coordination and shared dependencies
+
+Must Include:
+
+Complete folder structure with all critical files
+
+Root package.json with correct workspace configuration and scripts
+
+pnpm-workspace.yaml for workspace definition
+
+turbo.json with task definitions and caching strategy
+
+Root tsconfig.json for shared TypeScript configuration
+
+.npmrc for pnpm optimization settings
+
+Sample Make app structure (apps/make-example/)
+
+Sample shared package (packages/shared-utils/)
+
+GitHub Actions workflow for CI/CD with remote caching
+
+Comprehensive setup instructions (bash commands)
+
+Development workflow documentation
+
+Scaling guidelines for adding new Makes
+
+Technical Specifications:
+
+Node.js 18+ compatible
+
+TypeScript 5.0+
+
+ESLint + Prettier for code quality
+
+Environment variable handling across workspaces
+
+Support for both CLI tools and applications
+
+Fast incremental builds with caching
+
+Independent deployment capability per Make
+
+Output Format:
+
+Provide each file as a separate, complete, copy-paste-ready code block with filename indicated. Follow with bash commands for complete automated setup. End with troubleshooting section and best practices.
+
+PROMPT STRUCTURE (Use Exactly As Written)
+I need complete, production-ready configuration files and setup for a pnpm monorepo with Turborepo for managing Figma Make applications. The monorepo must support:
+
+Single shared node_modules for all workspace packages
+
+Multiple independent Make apps under apps/ directory
+
+Shared utilities and configurations under packages/ directory
+
+Fast builds with Turborepo caching and task orchestration
+
+CI/CD automation with GitHub Actions
+
+TypeScript support with strict type checking across workspaces
+
+Code quality tools (ESLint, Prettier)
+
+Easy scaling to 30+ Makes without structural changes
+
+Generate the following files in this exact order:
+
+Files to Generate:
+package.json (root) - Workspace root configuration
+
+pnpm-workspace.yaml - pnpm workspace definition
+
+turbo.json - Turborepo task configuration
+
+tsconfig.json (root) - Shared TypeScript configuration
+
+.npmrc - pnpm optimization settings
+
+.gitignore - Version control exclusions
+
+apps/make-example/package.json - Example Make app
+
+apps/make-example/tsconfig.json - App-specific TypeScript config
+
+apps/make-example/next.config.js - Next.js configuration
+
+packages/shared-utils/package.json - Shared utilities package
+
+packages/shared-utils/tsconfig.json - Package TypeScript config
+
+packages/shared-utils/src/index.ts - Entry point with example exports
+
+packages/config/package.json - Shared configuration package
+
+packages/config/tsconfig.json - Config package TypeScript setup
+
+.github/workflows/ci.yml - GitHub Actions CI/CD pipeline
+
+README.md - Complete setup and usage guide
+
+SETUP_INSTRUCTIONS.sh - Automated bash setup script
+
+After all files, provide:
+
+Step-by-step manual setup commands
+
+Verification steps
+
+Common issues and solutions
+
+Scaling guidelines
+
+Development workflow best practices
+
+Use This Exact Prompt
+When submitting to an AI, copy the text between the first "---" and this final "---" mark. The AI will generate all files needed for complete monorepo setup.
+
+Alternative: Quick Copy Command
+If you want to save this and use it in a file:
+
+bash
+# Save prompt to file
+cat > monorepo-setup-prompt.txt << 'PROMPT_END'
+[PASTE THE PROMPT SECTION ABOVE HERE]
+PROMPT_END
+
+# Then use with Claude/ChatGPT
+# Paste the content of monorepo-setup-prompt.txt into your AI
+What You'll Get Back
+The AI will provide:
+
+✅ 18+ production-ready configuration files
+✅ Complete directory structure (ready to create)
+✅ Automated setup script (bash commands)
+✅ GitHub Actions workflow (for CI/CD)
+✅ Troubleshooting guide with solutions
+✅ Scaling documentation for 30+ Makes
+✅ Development workflow documentation
+✅ TypeScript type definitions across workspaces
+✅ ESLint/Prettier configuration
+✅ Environment variable handling patterns
+
+Next Steps After Running Prompt
+Copy all generated files into your project directory
+
+Run the setup script provided by AI
+
+Verify with test commands (build, dev, lint)
+
+Commit to Git with proper .gitignore
+
+Add to GitHub and enable Actions
+
+Start migrating Makes into apps/ folder
+
+Pro Tips
+Keep this prompt handy - When you need to add new tools or change configuration later, reference this and ask the AI for updates.
+
+Version control the setup - Commit all generated files to track configuration history.
+
+Use filtered commands - pnpm turbo build --filter=make-auth to work with specific Makes.
+
+Enable remote caching - Add Vercel/Turbo credentials to .env.local for team caching benefits.

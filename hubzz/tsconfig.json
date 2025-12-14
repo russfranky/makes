@@ -1,0 +1,23 @@
+{
+  "extends": ["@tsconfig/strictest/tsconfig.json"],
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "lib": ["ES2022", "DOM"],
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@shared-utils/*": ["packages/shared-utils/src/*"],
+      "@config/*": ["packages/config/src/*"]
+    }
+  },
+  "include": ["apps/*", "packages/*"],
+  "exclude": ["node_modules", "dist", ".next"]
+}
