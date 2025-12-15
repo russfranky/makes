@@ -29,8 +29,6 @@
   },
   "globalDependencies": ["pnpm-lock.yaml"],
   "remoteCache": {
-    "enabled": true,
-    "url": "https://turbo.build/repo/remote-cache",
-    "environmentVariable": "TURBO_TOKEN"
+    "enabled": true
   }
 }

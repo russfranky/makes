@@ -1,8 +1,8 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Make Sample',
-  description: 'A sample Make app in the hubzz-makes monorepo.'
+  title: 'Make Example',
+  description: 'A example Make app in the hubzz-makes monorepo.'
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

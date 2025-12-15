@@ -1,0 +1,8 @@
+/* Simple global styles for Make Sample */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #f9f9f9;
+  color: #222;
+}

@@ -14,8 +14,8 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "@shared-utils/*": ["packages/shared-utils/src/*"],
-      "@config/*": ["packages/config/src/*"]
+      "@shared-utils": ["packages/shared-utils/src"],
+      "@config": ["packages/config/src"]
     }
   },
   "include": ["apps/*", "packages/*"],
